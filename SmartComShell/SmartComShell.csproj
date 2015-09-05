@@ -39,18 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connector.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="Helpers.cs" />
-    <Compile Include="MarketDepth.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="Portfolio.cs" />
-    <Compile Include="Position.cs" />
+    <Compile Include="General\Connector.cs" />
+    <Compile Include="General\Enums.cs" />
+    <Compile Include="General\Helpers.cs" />
+    <Compile Include="ExchangeEntities\MarketDepth.cs" />
+    <Compile Include="ExchangeEntities\Order.cs" />
+    <Compile Include="ExchangeEntities\Portfolio.cs" />
+    <Compile Include="ExchangeEntities\Position.cs" />
+    <Compile Include="General\SmartServers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quote.cs" />
-    <Compile Include="Security.cs" />
-    <Compile Include="Trade.cs" />
-    <Compile Include="UserTrade.cs" />
+    <Compile Include="ExchangeEntities\Quote.cs" />
+    <Compile Include="ExchangeEntities\Security.cs" />
+    <Compile Include="ExchangeEntities\Trade.cs" />
+    <Compile Include="ExchangeEntities\UserTrade.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="SmartCOM3Lib">
@@ -62,6 +63,11 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SmartSettings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
